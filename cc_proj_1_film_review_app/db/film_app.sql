@@ -6,10 +6,6 @@ DROP TABLE reviews;
 DROP TABLE films;
 DROP TABLE users;
 
-
-
-
-
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255)
@@ -26,9 +22,9 @@ CREATE TABLE films (
 );
 
 CREATE TABLE reviews (
+    id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
     film_id INT REFERENCES films(id),
     customer_rating INT,
-    customer_comment TEXT,
-    id SERIAL PRIMARY KEY
+    customer_comment TEXT
 );
