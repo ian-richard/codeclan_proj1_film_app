@@ -17,10 +17,10 @@ CREATE TABLE films (
 );
 
 CREATE TABLE reviews (
-    id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
     film_id INT REFERENCES films(id),
-    customer_rating VARCHAR(255),
-    customer_comment TEXT
+    customer_rating INT,
+    customer_comment TEXT,
+    id SERIAL PRIMARY KEY
 );
 

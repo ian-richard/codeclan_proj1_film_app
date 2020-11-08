@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{user.name}} </h1>
+
+<h3>Reviewed:</h3>
+<ul>
+{% for film in films %}
+    <li>{{ film.name }}</li>
+{% endfor %}
+
+</ul>
+
+{% endblock %}

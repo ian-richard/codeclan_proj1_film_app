@@ -2,6 +2,13 @@ from db.run_sql import run_sql
 from models.film import Film
 from models.user import User
 
+def save(film):
+    sql = "INSERT INTO films(film_name, rating_in_stars, genre, critic_review) VALUES ( %s, %s, %s, %s, %s ) RETURNING id"
+    values = [film.name, film.rating_in_stars, film.genre, film.critic_review]
+    results = run_sql( sql, values )
+    film.id = results[0]['id']
+    return film
+
 def select(id):
     film = None
     sql = "SELECT * FROM films WHERE id = %s"
