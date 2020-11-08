@@ -10,7 +10,7 @@ def delete_all():
 
 def save(review):
     sql = "INSERT INTO reviews ( user_id, film_id, customer_rating, customer_comment) VALUES ( %s, %s, %s, %s ) RETURNING id"
-    values = [review.user_id, review.film_id, review.customer_rating, review.comment]
+    values = [review.user_id.id, review.film_id.id, review.customer_rating, review.comment]
     results = run_sql( sql, values )
     review.id = results[0]['id']
     return review
