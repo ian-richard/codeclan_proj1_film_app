@@ -2,6 +2,10 @@ from db.run_sql import run_sql
 from models.film import Film
 from models.user import User
 
+def delete_all():
+    sql = "DELETE FROM users"
+    run_sql(sql)
+
 def save(user):
     sql = "INSERT INTO users( name ) VALUES ( %s ) RETURNING id"
     values = [user.name]

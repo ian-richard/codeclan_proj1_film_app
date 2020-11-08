@@ -1,6 +1,14 @@
+-- DROP TABLE users;
+-- DROP TABLE films;
+-- DROP TABLE reviews;
+
 DROP TABLE reviews;
 DROP TABLE films;
 DROP TABLE users;
+
+
+
+
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -11,7 +19,8 @@ CREATE TABLE users (
 CREATE TABLE films (
     id SERIAL PRIMARY KEY,
     film_name VARCHAR(255),
-    rating_in_stars VARCHAR(255),
+    rating_in_stars INT,
+    rating_text VARCHAR(255),
     genre VARCHAR(255),
     critic_review TEXT
 );
@@ -23,4 +32,3 @@ CREATE TABLE reviews (
     customer_comment TEXT,
     id SERIAL PRIMARY KEY
 );
-

@@ -14,13 +14,13 @@ user_repository.delete_all()
 user1 = User("Harry")
 user_repository.save(user1)
 
-film1 = Film("James Bond", 4, ****, "Action", "In this review...")
+film1 = Film("James Bond", 4, "****", "Action", "In this review...")
 film_repository.save(film1)
 
-film2 = Film("Harry Potter", 4, ****, "Kids", "This HP review...")
+film2 = Film("Harry Potter", 4, "****", "Kids", "This HP review...")
 film_repository.save(film2)
 
-film3 = Film("La Haine", 5, *****, "Action", "This 1995 classic film...")
+film3 = Film("La Haine", 5, "*****", "Action", "This 1995 classic film...")
 film_repository.save(film3)
 
 review1 =  Review(user1, film1, 2, "Outdated if you as me...")

@@ -3,6 +3,10 @@ from models.review import Review
 import repositories.user_repository as user_repository
 import repositories.film_repository as film_repository
 
+def delete_all():
+    sql = "DELETE FROM reviews"
+    run_sql(sql)
+
 def save(review):
     sql = "INSERT INTO reviews ( user_id, film_id, customer_rating, customer_comment) VALUES ( %s, %s, %s, %s ) RETURNING id"
     values = [review.user.id, review.film.id, review.customer_rating, review.comment]
