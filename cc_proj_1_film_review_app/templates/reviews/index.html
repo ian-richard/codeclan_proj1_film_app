@@ -2,6 +2,7 @@
 
     {% block content %}
     <h1>User Reviews</h1>
+    <p><a href="reviews/new">Write a new review</a></p>
     <p>Reviews in database</p>
     {% for review in reviews %}
     <p><a href="/films/{{ review.film.id }}"> <strong>{{ review.film.name }}</strong></a> | {{ review.customer_rating }} Stars | Comment: <i>"{{ review.comment }}"</i> </p>

@@ -14,6 +14,9 @@ user_repository.delete_all()
 user1 = User("Harry")
 user_repository.save(user1)
 
+user2 = User("Claire")
+user_repository.save(user2)
+
 
 film1 = Film("James Bond", 4, "****", "Action", "In this review...")
 film_repository.save(film1)

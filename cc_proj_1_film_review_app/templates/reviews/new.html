@@ -1,5 +1,36 @@
 {% extends 'base.html' %}
 
-{% block  %}
-    <p>reviews / new</p>
+{% block content %}
+    <h1>Add a review</h1>
+        <form action="/reviews" method="post">
+            <label for="user">Select your name:</label>
+            <select name="user_id" id="user">
+                {% for user in users %}
+                <option value="{{user.id}}">{{ user.name }}</option>
+                {% endfor %}
+            </select><p></p>
+
+            <label for="film">Select your film:</label>
+            <select name="film_id" id="film">
+            {% for film in films %}
+            <option value="{{ film.id }}"> {{film.name}}</option>
+                
+            {% endfor %}
+            </select>
+            <section>
+                <label for="stars">Select your rating:</label>
+                    <select name="stars" id="stars">
+                    <option value="1">&#9733; &#9734; &#9734; &#9734; &#9734;</option>
+                    <option value="2">&#9733; &#9733; &#9734; &#9734; &#9734;</option>
+                    <option value="3">&#9733; &#9733; &#9733; &#9734; &#9734;</option>
+                    <option value="4">&#9733; &#9733; &#9733; &#9733; &#9734;</option>
+                    <option value="5">&#9733; &#9733; &#9733; &#9733; &#9733;</option>
+</select>
+            </section>
+        <p></p>
+        <label for="review">Add your review</label><p></p>
+        <textarea name="review" id="review" cols="30" rows="10"></textarea><p></p>
+        <input type='submit' value="Submit">
+        </form>
 {% endblock  %}
+

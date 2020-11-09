@@ -11,3 +11,13 @@ reviews_blueprint = Blueprint("reviews", __name__)
 def reviews():
     reviews = review_repository.select_all() 
     return render_template("reviews/index.html", reviews = reviews) 
+
+@reviews_blueprint.route("/reviews/new", methods=['GET'])
+def new_review():
+    users = user_repository.select_all()
+    films = film_repository.select_all()
+    return render_template("reviews/new.html", users = users, films = films)
+
+@reviews_blueprint.route("/reviews", methods=['POST'])
+def create_review():
+    
