@@ -10,7 +10,7 @@ def delete_all():
 
 def save(review):
     sql = "INSERT INTO reviews ( user_id, film_id, customer_rating, customer_comment) VALUES ( %s, %s, %s, %s ) RETURNING id"
-    values = [review.user_id.id, review.film_id.id, review.customer_rating, review.comment]
+    values = [review.user.id, review.film.id, review.customer_rating, review.comment]
     results = run_sql( sql, values )
     review.id = results[0]['id']
     return review
@@ -26,9 +26,8 @@ def select_all():
     for row in results:
         user = user_repository.select(row['user_id'])
         film = film_repository.select(row['film_id'])
-        # customer_rating = review_repository.select(row['customer_rating'])
-        review = Review(row['id'], user, film, row['review'], row['customer_rating'], row['comment'] )
-        review.append(review)
+        review = Review(user, film, row['customer_rating'], row['customer_comment'], row['id'])
+        reviews.append(review)
     return reviews
 
     #next select 

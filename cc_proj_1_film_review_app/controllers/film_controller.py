@@ -7,5 +7,5 @@ films_blueprint = Blueprint("films", __name__)
 
 @films_blueprint.route("/films")
 def films():
-    
-    return render_template("films/index.html") 
+    films = film_repository.select_all()
+    return render_template("films/index.html", films = films) 

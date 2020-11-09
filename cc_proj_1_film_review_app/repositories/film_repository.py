@@ -20,5 +20,16 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        film = Film(result['id'], result['name'], result['rating_stars'], result['rating_text'], result['genre'], result['critic_review'])
+        film = Film(result['film_name'], result['rating_in_stars'], result['rating_text'], result['genre'], result['critic_review'], result['id'])
     return film
+
+def select_all():
+    films = []
+
+    sql = "SELECT * FROM films"
+    results = run_sql(sql)
+
+    for row in results:
+        film = Film(row['film_name'], row['rating_in_stars'], row['rating_text'], row['genre'], row['critic_review'], row['id'])
+        films.append(film)
+    return films

@@ -24,11 +24,11 @@ film_repository.save(film2)
 film3 = Film("La Haine", 5, "*****", "Action", "This 1995 classic film...")
 film_repository.save(film3)
 
-# review1 =  Review(user1, film1, 2, "Outdated if you as me...")
-# review_repository.save(review1)
+review1 =  Review(user1, film1, 2, "Entertaining, however not very woke.")
+review_repository.save(review1)
 
-# review2 =  Review(user1, film2, 2, "It's a kid's film")
-# review_repository.save(review2)
+review2 =  Review(user1, film2, 2, "It's a kid's film")
+review_repository.save(review2)
 
 review3 =  Review(user1, film3, 5, "Gripping story of young men in the suburbs of Paris")
 review_repository.save(review3)
