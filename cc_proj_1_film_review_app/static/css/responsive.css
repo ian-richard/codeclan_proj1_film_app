@@ -1,0 +1,14 @@
+@media (max-width: 767px) {
+    .row {
+    grid-auto-flow: row;
+    grid-template-columns: 100%;;
+    }
+  }
+
+/* Navigation */
+
+@media (max-width: 767px) {
+    .main-nav a {
+      padding: 0;
+    }
+  }
