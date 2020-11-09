@@ -9,5 +9,7 @@ reviews_blueprint = Blueprint("reviews", __name__)
 
 @reviews_blueprint.route("/reviews")
 def reviews():
-    reviews = review_repository.select_all() 
-    return render_template("reviews/index.html", reviews = reviews)
+    # reviews = review_repository.select_all() 
+    return render_template("reviews/index.html") 
+
+    # reviews = reviews
