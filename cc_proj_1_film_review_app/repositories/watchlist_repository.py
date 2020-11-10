@@ -39,11 +39,12 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-# def select(id):
-#     sql = "SELECT * FROM reviews WHERE id = %s"
-#     values  = [id]
-#     result  = run_sql(sql, values)[0]
-#     user = user_repository.select(result['user_id'])
-#     film = film_repository.select(result['film_id'])
-#     review = Review(user, film, result['customer_rating'], result['customer_comment'], result['id'])
-#     return review
+def select(id):
+    sql = "SELECT * FROM films WHERE id = %s"
+    values  = [id]
+    result  = run_sql(sql, values)[0]
+    user = user_repository.select(result['user_id'])
+    film = film_repository.select(result['film_id'])
+    watchlist_item = Watchlist(user, film, result['id'])
+    return watchlist_item
+

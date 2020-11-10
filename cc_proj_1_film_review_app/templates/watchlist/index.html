@@ -6,7 +6,7 @@
     {% for watchlist in watchlist_list %}
     <p>
         <a href="/films/{{ watchlist.film.id }}"> <strong>{{ watchlist.film.name }}</strong></a> 
-        | {{ watchlist.film.rating_in_stars}} Stars 
+        | {{ watchlist.film.rating_in_stars}} Stars | Added by: {{watchlist.user.name}}
         <form action="/watchlist/{{ watchlist.id }}/delete" method="POST">
             <input type="submit" value="Delete">
         </form>

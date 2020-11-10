@@ -17,3 +17,4 @@ def watchlist():
 def delete_watchlist(id):
     watchlist_repository.delete(id)
     return redirect("/watchlist")
+
