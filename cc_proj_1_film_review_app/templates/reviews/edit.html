@@ -1,4 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
     <h2>Update film review</h2>
+    <form action="/reviews/{{review_to_edit.id}}" method="POST">
+        <div>
+            <label for="Review">Film:</label>
+            <strong>{{review_to_edit.film.name}}</strong><br>
+            <label for="Comment:"></label>
+            <input type="text" id="comment" name="comment" value="{{review_to_edit.comment}}" size=100>
+        </div>
+        <div>
+            <label for="customer_rating">Select your rating:</label>
+                    <select name="customer_rating" id="customer_rating">
+                        <!-- <option selected disabled hidden>{{review_to_edit.customer_rating}} Stars</option> -->
+                        <option selected="selected" value="1">&#9733; &#9734; &#9734; &#9734; &#9734;</option>
+                        <option value="2">&#9733; &#9733; &#9734; &#9734; &#9734;</option>
+                        <option value="3">&#9733; &#9733; &#9733; &#9734; &#9734;</option>
+                        <option value="4">&#9733; &#9733; &#9733; &#9733; &#9734;</option>
+                        <option value="5">&#9733; &#9733; &#9733; &#9733; &#9733;</option>
+                    
+                    </select>
+        </div>
+        <div>
+            <p></p><input type="submit">
+        </div>
+    </form>
 {% endblock content %}

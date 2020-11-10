@@ -10,8 +10,8 @@
                 {% endfor %}
             </select><p></p>
 
-            <label for="film">Select your film:</label>
-            <select name="film_id" id="film">
+            <label for="Film">Select your film:</label>
+            <select name="film_id" id="film_id">
             {% for film in films %}
             <option value="{{ film.id }}"> {{film.name}}</option>
                 
@@ -19,7 +19,7 @@
             </select>
             <section>
                 <label for="stars">Select your rating:</label>
-                    <select name="stars" id="stars">
+                    <select name="customer_rating" id="customer_rating">
                     <option value="1">&#9733; &#9734; &#9734; &#9734; &#9734;</option>
                     <option value="2">&#9733; &#9733; &#9734; &#9734; &#9734;</option>
                     <option value="3">&#9733; &#9733; &#9733; &#9734; &#9734;</option>
@@ -28,8 +28,8 @@
 </select>
             </section>
         <p></p>
-        <label for="review">Add your review</label><p></p>
-        <textarea name="review" id="review" cols="30" rows="10"></textarea><p></p>
+        <label for="comment">Add your review</label><p></p>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea><p></p>
         <input type='submit' value="Submit">
         </form>
 {% endblock  %}

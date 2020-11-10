@@ -1,9 +1,3 @@
-from db.run_sql import run_sql
-from models.review import Review
-from models.user import User
-import repositories.user_repository as user_repository
-import repositories.film_repository as film_repository
-
 def delete_all():
     sql = "DELETE FROM reviews"
     run_sql(sql)
@@ -38,8 +32,3 @@ def select(id):
     film = film_repository.select(result['film_id'])
     review = Review(user, film, result['customer_rating'], result['customer_comment'], result['id'])
     return review
-
-def update(review):
-    sql = "UPDATE reviews SET (customer_rating, customer_comment) = (%s,%s) WHERE id = %s"
-    values = [review.customer_rating, review.comment, review.id]
-    run_sql(sql, values)
