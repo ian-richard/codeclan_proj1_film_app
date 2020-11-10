@@ -10,5 +10,10 @@ watchlist_blueprint = Blueprint("watchlist", __name__)
 
 @watchlist_blueprint.route("/watchlist")
 def watchlist():
-    watchlist = watchlist_repository.select_all() 
-    return render_template("watchlist/index.html", watchlist = watchlist) 
+    watchlist_list = watchlist_repository.select_all() 
+    return render_template("watchlist/index.html", watchlist_list = watchlist_list) 
+
+@watchlist_blueprint.route('/watchlist/<id>/delete', methods=['POST'])
+def delete_watchlist(id):
+    watchlist_repository.delete(id)
+    return redirect("/watchlist")

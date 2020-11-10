@@ -34,6 +34,11 @@ def select_all():
         watchlist_list.append(watchlist)
     return watchlist_list
 
+def delete(id):
+    sql = "DELETE FROM watchlist WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
 # def select(id):
 #     sql = "SELECT * FROM reviews WHERE id = %s"
 #     values  = [id]

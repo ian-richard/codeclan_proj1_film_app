@@ -4,8 +4,12 @@
     <h1>Watchlist</h1>
     <p></p><hr>
     {% for watchlist in watchlist_list %}
-    <p><a href="/films/{{ watchlist.film.id }}"> <strong>{{ watchlist.film.name }}</strong></a> 
+    <p>
+        <a href="/films/{{ watchlist.film.id }}"> <strong>{{ watchlist.film.name }}</strong></a> 
         | {{ watchlist.film.rating_in_stars}} Stars 
+        <form action="/watchlist/{{ watchlist.id }}/delete" method="POST">
+            <input type="submit" value="Delete">
+        </form>
 
     {% endfor %}
             

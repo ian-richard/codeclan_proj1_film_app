@@ -45,3 +45,8 @@ def update_review(id):
     print(review.id, review.comment, review.customer_rating, review.user, review.film)
     return redirect('/reviews')
 
+@reviews_blueprint.route('/reviews/<id>/delete', methods=['POST'])
+def delete_review(id):
+    review_repository.delete(id)
+    return redirect("/reviews")
+

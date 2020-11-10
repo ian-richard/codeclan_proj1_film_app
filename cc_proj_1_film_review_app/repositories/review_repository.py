@@ -43,3 +43,8 @@ def update(review):
     sql = "UPDATE reviews SET (customer_rating, customer_comment) = (%s,%s) WHERE id = %s"
     values = [review.customer_rating, review.comment, review.id]
     run_sql(sql, values)
+
+def delete(id):
+    sql = "DELETE FROM reviews WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
