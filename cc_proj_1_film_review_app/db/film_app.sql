@@ -30,7 +30,6 @@ CREATE TABLE reviews (
 CREATE TABLE watchlist (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
-    film_id INT REFERENCES films(id),
-    in_watchlist BIT
+    film_id INT REFERENCES films(id)
 
 );

@@ -8,7 +8,7 @@ import repositories.watchlist_repository as watchlist_repository
 
 watchlist_blueprint = Blueprint("watchlist", __name__)
 
-@reviews_blueprint.route("/watchlist")
+@watchlist_blueprint.route("/watchlist")
 def watchlist():
     watchlist = watchlist_repository.select_all() 
     return render_template("watchlist/index.html", watchlist = watchlist) 
