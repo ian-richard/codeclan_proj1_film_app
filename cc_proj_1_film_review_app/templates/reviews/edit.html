@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<DIV class="film">
     <h2>Update film review</h2>
     <form action="/reviews/{{review_to_edit.id}}" method="POST">
         <div>
@@ -24,4 +25,5 @@
             <p></p><input type="submit">
         </div>
     </form>
+</DIV>
 {% endblock content %}

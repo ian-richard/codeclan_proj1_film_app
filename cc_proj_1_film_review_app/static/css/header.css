@@ -3,25 +3,22 @@
     background-color: black;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 80px;
 
 }
 
 .main-nav li:first-child {
     margin-right: auto;
+    margin-top: 10px;
   }
 
 .main-nav li {
     list-style: none;
 }
 
-/* .main-nav ul {
-    margin-bottom: 0px;
-    margin-top: 0px;
-
-} */
 
 .main-nav a {
-    margin: 10px;
+    margin: 20px;
     
     background: black;
 
@@ -32,6 +29,8 @@
         padding-right: 16px;
         padding-bottom: 16px;
         text-decoration: none;
+        
+        
 }
 
 .main-nav .logo {
@@ -44,6 +43,5 @@
     color: #010101;
     letter-spacing: -6.75px;
     text-align: center;
+    margin: 0px;
 }
-
-    

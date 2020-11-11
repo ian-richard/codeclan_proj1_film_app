@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
-    {% block content %}
+{% block content %}
+<div class="film">
     <h1>Watchlist</h1>
     <p></p><hr>
     {% for watchlist in watchlist_list %}
@@ -10,7 +11,7 @@
         <form action="/watchlist/{{ watchlist.id }}/delete" method="POST">
             <input type="submit" value="Delete">
         </form>
-
-    {% endfor %}
-            
+    
+{% endfor %}
+</div>           
     {% endblock  %}

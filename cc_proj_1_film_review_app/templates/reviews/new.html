@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="film">
     <h1>Add a review</h1>
         <form action="/reviews" method="post">
             <label for="user">Select your name:</label>
@@ -32,5 +33,6 @@
         <textarea name="comment" id="comment" cols="30" rows="10"></textarea><p></p>
         <input type='submit' value="Submit">
         </form>
+    </div>
 {% endblock  %}
 

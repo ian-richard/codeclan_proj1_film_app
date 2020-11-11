@@ -7,5 +7,5 @@ users_blueprint = Blueprint("users", __name__)
 
 @users_blueprint.route("/users")
 def films():
-    
-    return render_template("users/index.html") 
+    users = user_repository.select_all()
+    return render_template("users/index.html", users=users) 

@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{film.name}}</h1>
-<p>Rating: {{film.rating_in_stars}} stars</p>
-<p> Genre: {{film.genre}}</p>
-<p> Critic's review: {{film.critic_review}}</p>
-<h5>Add to watchlist</h5>
-<form action="/films/{{film.id}}/add_to_watchlist" method="POST">
-    <input name="film_id" type="hidden" value="{{film.id}}">
-    <label for="user">Select your name:</label>
-            <select name="user_id" id="user_id">
-                {% for user in users %}
-                <option value="{{user.id}}">{{ user.name }}</option>
-                {% endfor %}
-            </select><p></p>
-    <input type="submit" value="Add to watchlist">
-</form>
+<div class="film">
+    <h1>{{film.name}}</h1>
+    <h4>Rating: {{film.rating_in_stars}} stars</h4>
+    <h4> Genre: {{film.genre}}</h4>
+    <p> Critic's review: {{film.critic_review}}</p>
+    <h5>Add to watchlist</h5>
+    <form action="/films/{{film.id}}/add_to_watchlist" method="POST">
+        <input name="film_id" type="hidden" value="{{film.id}}">
+        <label for="user">Select your name:</label>
+                <select name="user_id" id="user_id">
+                    {% for user in users %}
+                    <option value="{{user.id}}">{{ user.name }}</option>
+                    {% endfor %}
+                </select><p></p>
+        <input type="submit" value="Add to watchlist">
+    </form>
+</div>
 {% endblock %}
 

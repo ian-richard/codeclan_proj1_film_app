@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
     {% block content %}
-    <h1>Films</h1>
-    <p>Films in database</p>
-    {% for film in films %}
-    <div>
-    <a href="/films/{{ film.id }}"> {{ film.name }}</a> Genre: {{ film.genre }} Film rating: {{ film.rating_in_stars }}</p>
-    
-    <hr><p></p>
-    </div>
-    {% endfor %}
+    <DIV class="film">
+            <h1>Films</h1>
+            <p>Films in database</p>
+            {% for film in films %}
+            <div>
+            <a href="/films/{{ film.id }}"> {{ film.name }}</a> Genre: {{ film.genre }} Film rating: {{ film.rating_in_stars }}</p>
             
+            <hr><p></p>
+            
+    {% endfor %}
+    </DIV>
     {% endblock  %}
 
 
