@@ -1,0 +1,76 @@
+.container {
+  display: grid;
+  justify-content: center;
+}
+
+.img {
+  
+}
+ 
+ .favourite-bg-1 {
+    background-image: url(https://d2g2d79hvofmwa.cloudfront.net/cdn/ff/xAc091Ogc_YdZgyEnBfB8Gm6_hVmctncr73u7EXVssU/1604885791/public/styles/landscape_1200x675/public/hero-images/lucky-grandma1.jpg?itok=NsejB7k1);
+    object-fit: contain;
+  }
+  
+  .favourite-bg-2 {
+    background-image: url(https://www.indiewire.com/wp-content/uploads/2020/10/Screen-Shot-2020-10-24-at-8.54.17-AM.png);
+  }
+  
+  .favourite-bg-3 {
+    background-image: url(https://deadline.com/wp-content/uploads/2020/10/no-time-to-die.jpg?w=681&h=383&crop=1);
+  }
+  
+  .favourite {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    object-fit: scale-down;
+  }
+  
+  .favourite .single-favourite {
+    /* height: 264px; */
+    width: 33.3%;
+    /* background-size: auto; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0px;
+    padding:0px;
+  }
+  
+  .favourite .single-favourite .favourite-text p {
+    font-size: 1vw;
+    font-weight: 400;
+    color: #FFF;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 16px;
+  }
+  
+  .favourite .single-favourite .favourite-text h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.65vw;
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    margin-top: 184px;
+    margin-left: 16px;
+    margin-bottom: 0;
+  }
+  
+  .favourite .single-favourite .favourite-text a {
+    /* background-color: #60B99A; */
+    color: #fff;
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+
+  .bottom-left {
+    position: absolute;
+    bottom: 24px;
+    left: 16px;
+  }
+  
+  
