@@ -1,15 +1,38 @@
-html,body {
+html {
   margin:0;
   padding:0;
-  overflow-y: scroll; 
 }
 
-.body {
+/* #content {
+  overflow-y: auto; 
+} */
+body {
+  grid-template-areas: 
+    'banner'
+    'main'
+    'footer'
+    ;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
-    background-color: black;
+    background-color: white;
+    margin:0;
+    padding:0;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    
+      }
+    
+main {
+  min-height: 80vh;
 }
+
+
+header {grid-area: banner;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+
 
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://m.media-amazon.com/images/M/MV5BMTg3Nzg3ODU0NV5BMl5BanBnXkFtZTcwNTQxNDY3Mw@@._V1_.jpg");

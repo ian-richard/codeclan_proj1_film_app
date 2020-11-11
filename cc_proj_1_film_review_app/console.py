@@ -23,7 +23,7 @@ user2 = User("Claire")
 user_repository.save(user2)
 
 
-film1 = Film("James Bond", 4, "****", "Action", "In this review...")
+film1 = Film("James Bond", 4, "****", "Action", "Boozy egomanic goes on violent and womenising binge")
 film_repository.save(film1)
 
 film2 = Film("Harry Potter", 4, "****", "Kids", "This HP review...")
@@ -34,6 +34,16 @@ film_repository.save(film3)
 
 film4 = Film("Tom & Jerry", 5, "*****", "Cartoon", "It's a game of cat and mouse")
 film_repository.save(film4)
+
+film5 = Film("Lucky Grandma", 5, "****", "Comedy", "chain-smoking Chinese grandma goes all in at the casino, landing herself on the wrong side of luck - and in the middle of a gang war.")
+film_repository.save(film5)
+
+film6 = Film("Mank", 5, "*****", "Drama", "Follows screenwriter Herman J. Mankiewicz's tumultuous development of Orson Welles' iconic masterpiece Citizen Kane (1941).")
+film_repository.save(film6)
+
+film7 = Film("No Time To Die", 4, "***", "Action", "James Bond has left active service.")
+film_repository.save(film7)
+
 
 review1 =  Review(user1, film1, 2, "Entertaining, however not very woke.")
 review_repository.save(review1)
